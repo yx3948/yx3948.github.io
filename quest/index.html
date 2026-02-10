@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>我们这一家</title>
+        <link rel="shortcut icon"
+        href="favicon.png">
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color:rgb(255, 15, 143);
+                white-space: pre;
+            }
+
+
+
+            /* --TEXT STYLE-- */
+
+             .titletext{
+                position:fixed;
+                color:rgb(255, 55, 165);
+                text-shadow: 3px 5px 1px #818590;
+                /* border:6px solid black; */
+                font-size:120px;
+                font-family:'Times New Roman', Times, serif;
+                text-align:left;
+                font-style:italic;
+                z-index:1;
+             }
+             .clickappear{
+                opacity:0;
+                transition: opacity 0.1s ease-in;
+                /* filter: brightness(80%); */
+             }
+             .clickappear:hover{
+                opacity:1;
+             }
+
+            #title{
+                background-color:#ffffff;
+                width:800px;
+                left:1vw;
+                top:5vh;
+            }
+            #hello{
+                right:5vw;
+                top:490px;
+                transition: color 0.5s ease-in;
+            }
+            /* #hello:hover{
+                color:aqua;
+            } */
+            #intro{
+                position:fixed;
+                color:rgb(255, 55, 165);
+                background-color:#ffffff;
+                top:50vh;;
+                right:20vw;
+                width:30vw;
+                font-size:15px;
+                font-family:'Times New Roman', Times, serif;
+                text-align:left;
+                font-style:italic;
+                text-shadow:1px 1px 1px #ffffff;
+                z-index:1
+            }
+             /* #link{
+                color:rgb(255, 55, 165);
+                font-weight:bold;
+                z-index:5
+             } */
+
+
+             /* #link:link{
+                color: rgb(255, 55, 165);
+                text-decoration:none;
+             }
+             #link:visited{
+                color: green;
+                text-decoration:none;
+             }
+             #link:hover{
+                color: red;
+                font-style:italic;
+                font-size: 30px;
+                text-decoration: double underline;
+             }
+             #link:active{
+                color: blue;
+             } */
+
+             #second{
+                color:chartreuse;
+             }
+             #name{
+                color:rgb(81, 26, 9);
+                transition: color 0.5s ease-in;
+             }
+             #name:hover{
+                color: aqua;
+             }
+
+
+
+            /* --PICTURE STYLE-- */
+
+            #cart{
+                position: fixed;
+                top: 0px;
+                right:0px;
+                width: 100vw;
+                height:300px;
+                /* border-radius: 100px 100px 100px 100px; */
+                z-index:1;
+            }
+
+            #huama{
+                position:fixed;
+                top: 300px;
+                left:0px;
+                width: 100vw;
+                height:400px;
+                /* opacity:1;  */
+                z-index:-10;
+            }
+            
+             /* #first{
+                position:absolute;
+                top:5px;
+                left:0px;
+                width:100vw;
+                height: 100vh;
+               z-index:20;
+                transition: display 0.5s ease-out;
+             }
+             #first:clicked{
+                display:none;
+             }  */
+
+
+
+            /* --VIDEO STYLE-- */
+            #me{
+                position:absolute;
+                top: 300px;
+                right: 0vw;
+                /* width: 30vw; */
+                height:400px;
+                z-index:0;
+                opacity:0.3;
+            }
+            #me:hover{
+                opacity:1;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <a href=https://en.wikipedia.org/wiki/Shopping_cart><img class="clickappear"id="cart" src="cart.png"></a>
+       <a href="https://atashinchi.fandom.com/wiki/Okaa-san_Tachibana"><img class="clickappear"id="huama" src="huama.jpg"></a>
+
+       <a href=https://en.wikipedia.org/wiki/Shopping><div class="titletext" id="title">花太太<span id="name">購物中🛍️</span></div></a>
+       <!-- <div class="titletext" id="hello">✨～Hello</div> -->
+        <div class="manytext" id="intro">Atashin'chi 
+        (Japanese: あたしンち, Hepburn: Atashinchi; short for "atashi no uchi", literally my home or my family, in feminine 
+        and spoken form) is a Japanese comedy manga series by Eiko Kera. It was originally serialized in the Sunday edition 
+        of the Yomiuri Shimbun newspaper from 1994 to 2012, while a revival, titled Atashin'chi SUPER, has been serialised in 
+        Aera magazine since December 2019. The manga centers around the daily life of the Tachibana family. 
+        
+        <span id="second">An anime adaptation by Shin-Ei Animation was broadcast on TV Asahi from April 19, 2002, to September 19, 2009. 
+        A second anime series, titled Shin Atashin'chi (新あたしンち; "New Atashin'chi") was broadcast on Animax from October 6, 2015,
+        to April 5, 2016, in Japan, and was simulcast on Crunchyroll in certain countries. Select episodes Of Atashin'chi 
+        and Shin Atashin'chi are available on the official YouTube channel with English subtitles. A third anime series, 
+        Atashin'chi Next has been running on YouTube since June 5, 2024.</span></div>
+
+      <a href="https://en.wikipedia.org/wiki/Time-lapse_photography"><video loop controls id="me" src="me.mp4"
+       type="video/mp4"></video></a>
+        <!-- <div> what is <a id="link" href="https://en.wikipedia.org/wiki/Problem_solving">this</a> difficult</div> -->
+    </body>
+</html>
+
+<!-- cart image link:https://www.uline.com/Product/Detail/H-4569G/Shopping-Baskets-and-Carts/Large-Plastic-Shopping-Cart-Green?
+ pricode=WA9735&gadtype=pla&id=H-4569G&gad_source=1&gad_campaignid=1616155823&gbraid=0AAAAAD_uetNEStyGbN1dM4PkedChfKiPm&gclid=C
+ j0KCQiAnJHMBhDAARIsABr7b86sJbg_wdMNmVURiSQHPUQTi0ilz0pypFPfKTnyQ0FaMtze94Uf838aAi6uEALw_wcB -->
+ <!-- huama image credits to: 動畫製作公司： SHIN-EI動畫（Shin-Ei Animation）。 
+ 原作者： 螻榮子（けらえいこ）。漫畫出版社： 日本 MEDIA FACTORY。 -->
