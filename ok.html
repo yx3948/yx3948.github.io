@@ -3,34 +3,44 @@
     <head>
         <style>
             #lorem{
-                position:fixed;
-                top:30vh;
-                width:60vw;
-                left:20vw;
+                position:relative;
+                top:60vh;
+                width:80vw;
+                left:10vw;
                 font-size: 20px;
                 font-family: 'Times New Roman', Times, serif;
                 color: black;
                 text-align: left;
                 margin-top: 100px;
                 z-index: 2;
+                cursor: help;
+                transition: font-size 0.3s ease-out;
             }
-            #lorem {
-    transition: font-size 0.3s ease-out;
-}
+            #time{
+                position:fixed;
+                top:58vh;
+                left:10vw;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+                color: black;
+                text-align: left;
+                z-index: 2;
+            }
             #tomato{
                 position:fixed;
                 width:23vw;
                 left:5vw;
                 top:8vh;
                 z-index:1;
-                cursor: grab;
+                cursor: row-resize;
             }
             #happy{
                 position:fixed;
                 width:30vw;
                 left:38vw;
                 top:10vh;
-                z-index:1
+                z-index:1;
+                cursor: move;
             }
             #egg{
                 position:fixed;
@@ -40,14 +50,25 @@
                 z-index:1;
                 cursor: grab;
             }
+            #topbg{
+                position: fixed;
+                background-color:white;
+                width:100vw;
+                height:60vh;
+                top:0vh;
+                left:0vw;
+                z-index: -20;
+            }
 
             </style>
     </head>
     
     <body>
-      <div onclick="innerHTML = Date()" id="lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget fermentum diam.
+    <div id = "topbg"></div>    
+    <div onclick="innerHTML = Date()" id="time">it's only a matter of time. -laufey</div>
+      <div id="lorem"> Lorem ipsum dolor <span id ='small'>sit amet</span>, consectetur adipiscing elit. Cras eget fermentum diam.
     In maximus semper justo, sit amet tempor ipsum. Maecenas eget hendrerit mauris, id 
-    tempor elit. <span id ='small'>Curabitur facilisis id justo blandit tincidunt. </span>Fusce viverra, dui id 
+    tempor elit. Curabitur facilisis id justo blandit tincidunt. Fusce viverra, dui id 
     iaculis dictum, magna leo cursus lorem, sed tristique erat massa eu nisl. Curabitur 
     dignissim sem libero, at interdum tellus vehicula eu. Nunc sit amet sapien orci. Morbi 
     eleifend velit quis nisi tempus convallis. Ut sed eros bibendum, placerat purus in, 
@@ -65,11 +86,30 @@
     iaculis dictum, magna leo cursus lorem, sed tristique erat massa eu nisl. Curabitur 
     dignissim sem libero, at interdum tellus vehicula eu. Nunc sit amet sapien orci. </div>
     <!-- <img id = 'pome' src="okimage/pomegranate.png"></a> -->
-    <img id = 'tomato' src="okimage/tomato.png"></a>
-    <img id = 'egg' src="okimage/egg.png"></a>
-    <a href=index.html><img id = 'happy' src="okimage/happygif.gif"></a>
+    <img alt= "a red tomato sit on white background" id= 'tomato' src="okimage/tomato.png"></a>
+    <img alt= "a brown egg sit on white background" id = 'egg' src="okimage/egg.png"></a>
+    <a href=index.html><img alt= "a happy face gif with giliters sparking, text on it saya 100% happy" id = 'happy' src="okimage/happygif.gif"></a>
+    <script>
+        const isTab = window.matchMedia('(min-width:600px) and (max-width:1500px)')
+
+        if (isTab.matches){
+            alert("you're probaby on your tablet");
+        }
+ 
+        const isComp = window.matchMedia('(min-width:1500px)')
+
+        if (isComp.matches){
+            alert("you're probaby on your desktop");
+        }
+        
+        const isPhone = window.matchMedia('(max-width:599px)')
+
+        if (isPhone.matches){
+            alert("you're probaby on your phone");
+        }
+        </script>
     </body>
 
     <script src = "ok.js"></script>
 </html>
-        
+          
