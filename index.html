@@ -5,6 +5,7 @@
         <link rel="shortcut icon"
         href="favicon.png">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <style>
             body{
                 background-color:rgb(255, 15, 143);
@@ -142,7 +143,7 @@
                 position:absolute;
                 top: 300px;
                 right: 0vw;
-                /* width: 30vw; */
+                /* width: 20vw; */
                 height:400px;
                 z-index:0;
                 opacity:0.3;
@@ -150,12 +151,94 @@
             #me:hover{
                 opacity:1;
             }
+
+            #bottomright{
+                position:fixed;
+                background-color: blue;
+                width: 9vw;
+                height: 9vh;
+                top:97vh;
+                /* bottom: 3vh; */
+                left: 97vw;
+                /* right: 3vw; */
+                z-index: 50000;
+                display:none;
+            }
+
+            #block{
+                position:fixed;
+                background-color: white;
+                width: 100vw;
+                height: 100vh;
+                top:0vh;
+                left:0vw;
+                z-index: 100000;
+                display:none;
+            }
+            
+            @media(max-width:600px){
+                body{
+                    background-color:red;
+                }
+                #mobile{
+                    position:fixed;
+                    top:50vh;
+                    left:25vw;
+                    width:60vw;
+                     text-align: center;
+                    transform: translate(-50%, -50%);
+                    font-size: 150px;
+                    font-family: 'Times New Roman', Times, serif;
+                    line-height:0.7;
+                    -webkit-text-stroke: 3px black;
+                    color: white;
+                 z-index: 1000000;
+                }
+            
+                #bottomright{
+                    display:inline;
+                }
+                #block{
+                    display:inline;
+                    background-color:red;
+                }
+            }
+                
+            @media only screen and (min-width:600px) and (max-width:1500px){
+                    body{
+                        background-color:orange;
+                    }
+                    
+                    #tablet{
+                        position:fixed;
+                        top:50vh;
+                        left:45vw;
+                        width:60vw;
+                         text-align: center;
+                        transform: translate(-50%, -50%);
+                        font-size: 150px;
+                        font-family: 'Times New Roman', Times, serif;
+                        line-height:0.7;
+                        -webkit-text-stroke: 3px black;
+                        color: white;
+                     z-index: 1000000;
+                    }
+                    #block{
+                    display:inline;
+                    background-color:rgb(255, 128, 0);
+                }
+                }
             
         </style>
     </head>
     <body>
-        <a href=https://en.wikipedia.org/wiki/Shopping_cart><img class="clickappear"id="cart" src="oneimage/cart.png"></a>
-       <a href="https://atashinchi.fandom.com/wiki/Okaa-san_Tachibana"><img class="clickappear"id="huama" src="oneimage/huama.jpg"></a>
+        <div id="mobile">NOT<br>FOR<br>MOBILE</div>
+        <div id ="tablet">NOT<br>FOR<br>TABLET</div>
+        <div id="bottomright"></div>
+        <div id="block"></div>
+        <a href=https://en.wikipedia.org/wiki/Shopping_cart><img class="clickappear" alt="a dark green color shopping cart"id="cart" src="oneimage/cart.png"></a>
+       <a href="https://atashinchi.fandom.com/wiki/Okaa-san_Tachibana"><img class="clickappear" alt="a mascot of a character called Okaa-san Tachibana from japanese anime 
+        'Atashin'chi' shopping in a farmer's market, on the right side of image there're baskets of plastic packaged snacks" id="huama" src="oneimage/huama.jpg"></a>
 
        <a href=https://en.wikipedia.org/wiki/Shopping><div class="titletext" id="title">花太太<span id="name">購物中🛍️</span></div></a>
        <!-- <div class="titletext" id="hello">✨～Hello</div> -->
@@ -173,9 +256,28 @@
             on the official YouTube channel with English subtitles. A third anime series, Atashin'chi Next has
              been running on YouTube since June 5, 2024.</span></div>
 
-      <a href=ok.html><video loop controls id="me" src="oneimage/me.mp4"
+      <a href=ok.html><video alt="time lapse video of a girl doing assignment, sometime she pick up her phone, sometime she's type staring at the monitor, monitor is not in frame but you could tell by lighting change on her face"loop controls id="me" src="oneimage/me.mp4"
        type="video/mp4"></video></a>
         <!-- <div> what is <a id="link" href="https://en.wikipedia.org/wiki/Problem_solving">this</a> difficult</div> -->
+          <script>
+        const isTab = window.matchMedia('(min-width:600px) and (max-width:1500px)')
+
+        if (isTab.matches){
+            alert("you're probaby on your tablet");
+        }
+
+        const isComp = window.matchMedia('(min-width:1500px)')
+
+        if (isComp.matches){
+            alert("you're probaby on your desktop");
+        }
+        
+        const isPhone = window.matchMedia('(max-width:599px)')
+
+        if (isPhone.matches){
+            alert("you're probaby on your phone");
+        }
+        </script>
     </body>
 </html>
 
